@@ -2,7 +2,7 @@
 
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { IsOptional } from 'class-validator';
-import { BaseTableSearch } from 'src/utils/helper';
+import { BaseTableSearch } from '../../utils/helper';
 
 // ~ extends BaseTableSearch for table query (page, size)
 // findAll
