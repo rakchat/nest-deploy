@@ -8,7 +8,9 @@ export const connectDatabase = [
     username: process.env.DATABASE_USERNAME,
     password: process.env.DATABASE_PASSWORD,
     database: process.env.DATABASE_NAME,
-    entities: ['dist/**/*.entity.js'], // autoLoadEntities: true, // entities: [Photo, User]
+    autoLoadEntities: true,
+    // entities: ['dist/**/*.entity.js'], // autoLoadEntities: true, // entities: [Photo, User]
+    // entities: ['dist/**/*.entity.js'], // autoLoadEntities: true, // entities: [Photo, User]
     synchronize: true,
   }),
 ];
