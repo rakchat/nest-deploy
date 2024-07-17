@@ -6,7 +6,7 @@ import { BaseTableSearch } from '../../utils/helper';
 
 // ~ extends BaseTableSearch for table query (page, size)
 // findAll
-export class CustomerSearch extends BaseTableSearch {
+export class UserSearch extends BaseTableSearch {
   @ApiPropertyOptional()
   @IsOptional()
   name: string;

@@ -6,18 +6,26 @@ import {
   Patch,
   Param,
   Delete,
+  Query,
 } from '@nestjs/common';
 import { UsersService } from './users.service';
-import { CreateUserDto } from './dto/create-user.dto';
+import { CreateUserDto, UserSearch } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 
 @Controller('users')
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
+  // @Get()
+  // findAll() {
+  //   return this.usersService.findAll2();
+  // }
+
   @Get()
-  findAll() {
-    return this.usersService.findAll();
+  findAll(@Query() query: UserSearch) {
+    query.size = query.size || 10;
+
+    return this.usersService.findAll(query);
   }
 
   @Get(':id')
